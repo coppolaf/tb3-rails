@@ -2,21 +2,12 @@ module ModalHelper
 
   #modals have a header, a body, a footer for options.
   def modal_dialog(options = {}, &block)
-<<<<<<< HEAD
     content_tag :div, :id => options[:id], :class => "bootstrap-modal modal fade" do
       content_tag :div, :class => "modal-dialog " + (!options[:size].nil? ? options[:size] : '') do
         content_tag :div, :class => "modal-content" do
           modal_header(options[:header].merge(:id => options[:id])) +
           modal_body(options[:body].merge(:id => options[:id])) +
           modal_footer(options[:footer].merge(:id => options[:id])) 
-=======
-    content_tag :div, :id => options[:id], :class => "modal fade" do
-      content_tag :div, :class => "modal-dialog" do
-        content_tag :div, :class => "modal-content" do
-          modal_header(options[:header]) +
-          modal_body(options[:body]) +
-          modal_footer(options[:footer])
->>>>>>> bootstrap3
         end
       end
     end
@@ -29,11 +20,7 @@ module ModalHelper
         content_tag(:h4, options[:title], :class => 'modal-title', &block)
       else
         content_tag(:h4, options[:title], :class => 'modal-title', &block)
-<<<<<<< HEAD
-      end   
-=======
       end	
->>>>>>> bootstrap3
     end
   end
 
@@ -46,11 +33,7 @@ module ModalHelper
   end
 
   def close_button(dismiss)
-<<<<<<< HEAD
-    #It doesn't seem to like content_tag, so we do this instead.    
-=======
     #It doesn't seem to like content_tag, so we do this instead.	
->>>>>>> bootstrap3
     raw("<button class=\"close\" data-dismiss=\"#{dismiss}\" aria-hidden=\"true\">&times;</button>")
   end
 
